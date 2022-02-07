@@ -10,7 +10,13 @@ fun main() {
     assistiramAmbos.add("Ana")
     assistiramAmbos.add("Ana")
     println(assistiramAmbos)
+    println("União: ${assistiramCursoAndroid union assistiramCursoKotlin}")
+    println("Subtração: ${assistiramCursoAndroid subtract assistiramCursoKotlin}")
+    println("Interceção: ${assistiramCursoAndroid intersect assistiramCursoKotlin}")
 
-
+    val assistiramList = assistiramAmbos.toMutableList()
+    assistiramList.add("Alex")
+    println(assistiramList)
+    println(assistiramList.toSet()) // não repete os elementos
 }
 

@@ -6,7 +6,7 @@ fun main() {
         Pair(2, 64.0),
         3 to 50.0,
         4 to 100.00,
-        5 to 150.0,
+        5 to 100.0,
         6 to 80.0
     )
     //val valorPedido = pedidos.getValue(5)  Gera uma Exception
@@ -37,6 +37,32 @@ fun main() {
         numero % 2 == 0
     }
     println(pedidosPares)
+
+    println(pedidos + Pair(7, 90.0))
+    println(pedidos)
+    println(pedidos + mapOf(7 to 90.0, 8 to 120.00))
+    println(pedidos)
+
+    println(pedidos - 6)
+    println(pedidos - listOf(6, 5, 1))
+
+    //pedidos.putAll(setOf(7 to 90.0, 8 to 120.00))
+    //println(pedidos)
+    pedidos += listOf(7 to 90.0, 8 to 120.00)
+    println(pedidos)
+
+    pedidos.keys.remove(1)
+    println(pedidos)
+
+    pedidos.values.remove(50.0)
+    println(pedidos)
+    pedidos.values.remove(100.0)
+    println(pedidos)
+
+    pedidos -= 6
+
+    println(pedidos)
+
 }
 
 fun testaMap(pedidos: MutableMap<Int, Double>) {
